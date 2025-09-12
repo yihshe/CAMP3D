@@ -11,7 +11,7 @@ A reproducible pipeline to go from **Unreal Engine exports → Blender (4.2) →
 
 - **Python package**: `camp3d`
 - **CLI entry point**: `camp3d`
-- **CAMP3D Dataset**: [Download here](https://zenodo.org/records/17106960) 
+- **Dataset**: [Download here](https://zenodo.org/records/17106960) 
 - **Citation**: See [Citation](#citation) section below
 
 ## Table of Contents
