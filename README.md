@@ -462,8 +462,10 @@ For detailed testing instructions, see [TESTING.md](TESTING.md).
    bash test_pipeline.sh
    ```
 
-## Differences vs upstream Blender2Helios.py 
+## Blender Addon Script: Blender2Helios.py (adapted) — by Yihang She (2025)
 
+Base project: https://github.com/neumicha/Blender2Helios  (GPLv3)
+Differences vs upstream:
 1. Uses per-object `helios_part_id` for `<part id="...">` in the scene XML.
 2. Emits **relative** OBJ paths under `data/<scene>/sceneparts`.
 3. Survey generation is decoupled (we build UAV-LS surveys via `plan_path`).
