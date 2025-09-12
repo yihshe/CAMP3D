@@ -3,6 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Blender 4.2](https://img.shields.io/badge/blender-4.2-orange.svg)](https://www.blender.org/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17106960.svg)](https://doi.org/10.5281/zenodo.17106960)
 
 **Pipeline and Dataset From Paper: *Scaling Up Forest Vision with Synthetic Data* (She et al., 2025)**
 
@@ -10,7 +11,7 @@ A reproducible pipeline to go from **Unreal Engine exports → Blender (4.2) →
 
 - **Python package**: `camp3d`
 - **CLI entry point**: `camp3d`
-- **Dataset**: [Download here](https://github.com/yihshe/CAMP3D/releases) (coming soon - synthetic forest point clouds with semantic labels)
+- **Dataset**: [Download here](https://zenodo.org/records/17106960) 
 - **Citation**: See [Citation](#citation) section below
 
 ## Table of Contents
