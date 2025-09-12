@@ -462,7 +462,7 @@ For detailed testing instructions, see [TESTING.md](TESTING.md).
    bash test_pipeline.sh
    ```
 
-## Blender Addon Script: Blender2Helios.py (adapted) 
+## Blender Addon Script: `Blender2Helios.py` (adapted) 
 
 Base project: https://github.com/neumicha/Blender2Helios  (GPLv3)
 
