@@ -55,7 +55,7 @@ CAMP3D requires several external dependencies that must be installed separately:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yihshe/camp3d.git
+git clone https://github.com/yihshe/CAMP3D.git
 cd camp3d-0.1.0
 
 # Install in development mode
