@@ -1,11 +1,45 @@
-# CAMP3D
+# Cambridge Arboreal Modelling Panoptic 3D (CAMP3D): Pipeline and Dataset
 
-**Cambridge Arboreal Modelling - Panoptic 3D**
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Blender 4.2](https://img.shields.io/badge/blender-4.2-orange.svg)](https://www.blender.org/)
+
+**From Paper: Scaling Up Forest Vision with Synthetic Data**
 
 A reproducible pipeline to go from **Unreal Engine exports → Blender (4.2) → HELIOS++ LiDAR simulation → ML-ready point clouds**, including optional **leaf/wood semantics**, UAV flight planning, survey execution, and post-processing for machine learning.
 
-- Python package: `camp3d`
-- CLI entry point: `camp3d`
+```mermaid
+graph LR
+    A[Unreal Engine<br/>FBX Export] --> B[Blender 4.2<br/>Scene Creation]
+    B --> C[Semantic Labeling<br/>Leaf/Wood Classification]
+    C --> D[HELIOS++ Export<br/>Scene + Materials]
+    D --> E[UAV Path Planning<br/>Survey Generation]
+    E --> F[HELIOS++ Simulation<br/>LiDAR Scanning]
+    F --> G[ML Post-processing<br/>Point Cloud Tiling]
+    G --> H[ML-Ready Dataset<br/>PLY Files]
+```
+
+- **Python package**: `camp3d`
+- **CLI entry point**: `camp3d`
+- **Dataset**: [Download here](https://github.com/yihshe/CAMP3D/releases) (coming soon - synthetic forest point clouds with semantic labels)
+- **Citation**: See [Citation](#citation) section below
+
+## Table of Contents
+
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Setup](#setup)
+- [Quick Start](#quick-start)
+- [Example Scenes](#example-scenes)
+- [Command Reference](#command-reference)
+- [Materials](#materials-using-ours-or-your-own)
+- [Post-processing for Machine Learning](#post-processing-for-machine-learning)
+- [Configuration](#configuration)
+- [Contributing](#contributing)
+- [Testing](#testing)
+- [Citation](#citation)
+- [License](#license)
 
 ## Features
 
@@ -56,10 +90,10 @@ CAMP3D requires several external dependencies that must be installed separately:
 ```bash
 # Clone the repository
 git clone https://github.com/yihshe/CAMP3D.git
-cd camp3d-0.1.0
+cd CAMP3D
 
 # Install in development mode
-pip install -e .
+pip install -e ./camp3d-0.1.0
 ```
 
 ### Option 2: Install from PyPI (when available)
@@ -100,7 +134,7 @@ The quick demo contains a single tree extracted from the original Deciduous4 sce
 
 ```bash
 # Run the complete pipeline
-camp3d run -c examples/quickdemo_config.yaml
+camp3d run -c camp3d-0.1.0/examples/quickdemo_config.yaml
 ```
 
 This will:
@@ -110,6 +144,8 @@ This will:
 4. **Plan** UAV survey flight path
 5. **Simulate** LiDAR scanning
 6. **Post-process** results to ML-ready format
+
+> **Expected Output**: A point cloud dataset obtained by virtual UAV laser scans, semantically labeled with ground/wood/leaf classifications and instance labels, ready for machine learning tasks.
 
 ### 3. View Results
 
@@ -236,7 +272,7 @@ camp3d postprocess-ml \
 ### Full Pipeline
 ```bash
 # Run complete pipeline with config file
-camp3d run -c examples/quickdemo_config.yaml
+camp3d run -c camp3d-0.1.0/examples/quickdemo_config.yaml
 
 # Run with custom parameters
 camp3d run \
@@ -429,7 +465,7 @@ For detailed testing instructions, see [TESTING.md](TESTING.md).
    python test_camp3d.py
    
    # Quick pipeline test
-   camp3d run -c examples/quickdemo_config.yaml
+   camp3d run -c camp3d-0.1.0/examples/quickdemo_config.yaml
    ```
 
 3. **Full pipeline test**:
@@ -452,7 +488,30 @@ For detailed testing instructions, see [TESTING.md](TESTING.md).
 - Export writes into `<output_dir>/data/<SceneName>/...`.
 - `survey-run` defaults outputs to `<output_dir>/output/<SceneName>`; override with `--output-dir`.
 
+## Citation
+
+If you use CAMP3D in your research, please cite our paper:
+
+```bibtex
+@article{she2024scaling,
+  title={Scaling Up Forest Vision with Synthetic Data},
+  author={She, Yihang and others},
+  journal={arXiv preprint arXiv:XXXX.XXXXX},
+  year={2024}
+}
+```
+
+**BibTeX Entry** (copy and paste):
+```bibtex
+@article{she2024scaling,
+  title={Scaling Up Forest Vision with Synthetic Data},
+  author={She, Yihang and others},
+  journal={arXiv preprint arXiv:XXXX.XXXXX},
+  year={2024}
+}
+```
+
 ## License
 
-- Python package: MIT.
-- Example adapted Blender2Helios add-on: GPLv3 (inherits upstream's license).
+- **Python package**: MIT License
+- **Example adapted Blender2Helios add-on**: GPLv3 (inherits upstream's license)
