@@ -462,7 +462,7 @@ For detailed testing instructions, see [TESTING.md](TESTING.md).
    bash test_pipeline.sh
    ```
 
-## Differences vs upstream Blender2Helios (credit: Yihang She)
+## Differences vs upstream Blender2Helios.py 
 
 1. Uses per-object `helios_part_id` for `<part id="...">` in the scene XML.
 2. Emits **relative** OBJ paths under `data/<scene>/sceneparts`.
@@ -479,18 +479,8 @@ For detailed testing instructions, see [TESTING.md](TESTING.md).
 
 ## Citation
 
-If you use CAMP3D in your research, please cite our paper:
+If you find CAMP3D useful in your research, please consider to cite our paper:
 
-```bibtex
-@article{she2024scaling,
-  title={Scaling Up Forest Vision with Synthetic Data},
-  author={She, Yihang and others},
-  journal={arXiv preprint arXiv:XXXX.XXXXX},
-  year={2024}
-}
-```
-
-**BibTeX Entry** (copy and paste):
 ```bibtex
 @article{she2024scaling,
   title={Scaling Up Forest Vision with Synthetic Data},
