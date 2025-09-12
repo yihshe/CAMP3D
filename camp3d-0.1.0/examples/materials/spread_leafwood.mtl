@@ -1,0 +1,23 @@
+# Material for landscape
+newmtl Landscape
+Ka 0.2 0.2 0.2
+Kd 0.8 0.8 0.8
+illum 1
+helios_classification 2
+helios_isGround 1
+
+# Material for tree wood
+newmtl Trees_Wood
+Ka 0.2 0.2 0.2
+Kd 0.7 0.6 0.3
+illum 1
+helios_classification 3
+helios_isGround 0
+
+# Material for tree leaves
+newmtl Trees_Leaves
+Ka 0.2 0.2 0.2
+Kd 0.2 0.6 0.2
+illum 1
+helios_classification 4
+helios_isGround 0

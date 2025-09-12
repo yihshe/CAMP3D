@@ -1,0 +1,35 @@
+
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "camp3d"
+version = "0.1.0"
+description = "CAMP3D: Cambridge Arboreal Modelling - Panoptic 3D pipeline (Unreal Engine → Blender → HELIOS++ LiDAR simulation)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT (package), GPLv3 (adapted addon example)"}
+authors = [{name="Yihang She (author of adaptations)"}, {name="Contributors"}]
+dependencies = [
+  "typer>=0.12.3",
+  "rich>=13.7.1",
+  "pydantic>=2.6.0",
+  "pyyaml>=6.0.1",
+  "numpy>=1.21.0",
+  "plyfile>=0.7.4"
+]
+
+[project.scripts]
+camp3d = "camp3d.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/camp3d"]
+include = [
+    "examples/**/*",
+    "test_*.py",
+    "test_*.sh",
+    "run_*.sh",
+    "*.yaml",
+    "*.md"
+]

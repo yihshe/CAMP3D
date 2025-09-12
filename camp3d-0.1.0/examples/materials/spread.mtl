@@ -1,0 +1,13 @@
+newmtl Landscape
+Ka 0.2 0.2 0.2
+Kd 0.8 0.8 0.8
+illum 1
+helios_classification 2
+helios_isGround 1
+
+newmtl Trees
+Ka 0.2 0.2 0.2
+Kd 0.7 0.6 0.3
+illum 1
+helios_classification 3
+helios_isGround 0

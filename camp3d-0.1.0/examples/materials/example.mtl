@@ -1,0 +1,11 @@
+newmtl Ground
+Ka 0 0 1
+helios_classification 1
+
+newmtl Cubes
+Ka 1 0 0
+helios_classification 2
+
+newmtl Spheres
+Ka 0 1 0
+helios_classification 3

@@ -1,0 +1,48 @@
+# QuickDemo Configuration
+# Quick test configuration for CAMP3D pipeline
+
+camp3d:
+  materials_dir: ./materials
+
+helios:
+  output_dir: ./helios
+
+unreal:
+  landscape_fbx: ./scene/quickdemo/quickdemo_landscape.fbx
+  trees_fbx: ./scene/quickdemo/quickdemo_trees.fbx
+
+scene:
+  name: quickdemo
+  scene_dir: ./scene
+  blend: ./scene/quickdemo/quickdemo.blend
+  semantics:
+    trees_collection: Trees
+    leaf_keywords: ["Leaves", "MTL_RW_Needles", "MI_birch_branch", "MI_pine_branch", "MI_Leaves", "leaf", "MI_Pine_Tree_Needles", "MI_Scots_Pine_Sheet_Sick", "MI_Scots_Pine_Sheet", "MI_Pine_Mountain_Ash_Sheet", "TwoSided"]
+    write_csv: false
+
+export:
+  use_own_materials: true
+  materials_name: spread_leafwood
+  save_scene_bbox: true
+  save_survey_file: true
+
+planning:
+  rotate_deg: 0
+  survey_mode: ULS
+  spacing: 20.0
+  relative_altitude: 60.0
+  speed: 5.0
+  pulse_freq_hz: 200000
+  pattern: criss-cross
+
+survey:
+  callback_frequency: 10000
+  output_dir: ./helios/output
+
+postprocess:
+  tile_size: 50.0
+  merge_all_ts: false
+  ground_label: 2
+  wood_label: 3
+  leaf_label: 4
+  leafwood: true
