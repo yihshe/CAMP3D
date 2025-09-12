@@ -1,14 +1,14 @@
-# Cambridge Arboreal Modelling Panoptic 3D (CAMP3D): Pipeline and Dataset
+# Cambridge Arboreal Modelling Panoptic 3D (CAMP3D)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Blender 4.2](https://img.shields.io/badge/blender-4.2-orange.svg)](https://www.blender.org/)
 
-**From Paper: Scaling Up Forest Vision with Synthetic Data**
+**Pipeline and Dataset From Paper: Scaling Up Forest Vision with Synthetic Data**
 
 A reproducible pipeline to go from **Unreal Engine exports → Blender (4.2) → HELIOS++ LiDAR simulation → ML-ready point clouds**, including optional **leaf/wood semantics**, UAV flight planning, survey execution, and post-processing for machine learning.
 
-```mermaid
+<!-- ```mermaid
 graph LR
     A[Unreal Engine<br/>FBX Export] --> B[Blender 4.2<br/>Scene Creation]
     B --> C[Semantic Labeling<br/>Leaf/Wood Classification]
@@ -17,7 +17,7 @@ graph LR
     E --> F[HELIOS++ Simulation<br/>LiDAR Scanning]
     F --> G[ML Post-processing<br/>Point Cloud Tiling]
     G --> H[ML-Ready Dataset<br/>PLY Files]
-```
+``` -->
 
 - **Python package**: `camp3d`
 - **CLI entry point**: `camp3d`
