@@ -8,17 +8,6 @@
 
 A reproducible pipeline to go from **Unreal Engine exports → Blender (4.2) → HELIOS++ LiDAR simulation → ML-ready point clouds**, including optional **leaf/wood semantics**, UAV flight planning, survey execution, and post-processing for machine learning.
 
-<!-- ```mermaid
-graph LR
-    A[Unreal Engine<br/>FBX Export] --> B[Blender 4.2<br/>Scene Creation]
-    B --> C[Semantic Labeling<br/>Leaf/Wood Classification]
-    C --> D[HELIOS++ Export<br/>Scene + Materials]
-    D --> E[UAV Path Planning<br/>Survey Generation]
-    E --> F[HELIOS++ Simulation<br/>LiDAR Scanning]
-    F --> G[ML Post-processing<br/>Point Cloud Tiling]
-    G --> H[ML-Ready Dataset<br/>PLY Files]
-``` -->
-
 - **Python package**: `camp3d`
 - **CLI entry point**: `camp3d`
 - **Dataset**: [Download here](https://github.com/yihshe/CAMP3D/releases) (coming soon - synthetic forest point clouds with semantic labels)
