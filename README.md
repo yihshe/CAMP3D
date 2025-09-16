@@ -5,13 +5,18 @@
 [![Blender 4.2](https://img.shields.io/badge/blender-4.2-orange.svg)](https://www.blender.org/)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17106960.svg)](https://doi.org/10.5281/zenodo.17106960)
 
-**Pipeline and Dataset From Paper: *Scaling Up Forest Vision with Synthetic Data* (She et al., 2025)**
+**Pipeline and Dataset From Paper: [*Scaling Up Forest Vision with Synthetic Data*](https://arxiv.org/abs/2509.11201) (Yihang She, Andrew Blake, David Coomes, Srinivasan Keshav, 2025)**
 
 A reproducible pipeline to go from **Unreal Engine exports → Blender (4.2) → HELIOS++ LiDAR simulation → ML-ready point clouds**, including optional **leaf/wood semantics**, UAV flight planning, survey execution, and post-processing for machine learning.
+
+![Synthetic data generation pipeline](figures/pipeline_overview.png)
+
+*Figure 1: **Synthetic data generation pipeline, written in Python, and fully automated to execute each step in this figure.** The pipeline processes a forest scene from Unreal Engine by (a) adding files to Blender, (b) customizing instance and semantic labels, (c) planning the UAV flight path, setting up a virtual laser scanner, and (d) structuring files for LiDAR survey. It completes post-processing to produce a machine learning dataset. This process can be executed with a single command line, allowing parameter adjustments through arguments.*
 
 - **Python package**: `camp3d`
 - **CLI entry point**: `camp3d`
 - **Dataset**: [Download here](https://zenodo.org/records/17106960) 
+- **Preprint**: [arXiv:2509.11201](https://arxiv.org/abs/2509.11201)
 - **Citation**: See [Citation](#citation) section below
 
 ## Table of Contents
@@ -486,11 +491,14 @@ Differences vs upstream:
 If you find CAMP3D useful in your research, please consider to cite our paper:
 
 ```bibtex
-@article{she2024scaling,
-  title={Scaling Up Forest Vision with Synthetic Data},
-  author={She, Yihang and others},
-  journal={arXiv preprint arXiv:XXXX.XXXXX},
-  year={2024}
+@misc{she2025scalingforestvisionsynthetic,
+      title={Scaling Up Forest Vision with Synthetic Data}, 
+      author={Yihang She and Andrew Blake and David Coomes and Srinivasan Keshav},
+      year={2025},
+      eprint={2509.11201},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2509.11201}, 
 }
 ```
 
