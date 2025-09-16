@@ -9,7 +9,7 @@
 
 ![Synthetic data generation pipeline](figures/pipeline_overview.png)
 
-*Figure: A reproducible pipeline to go from **Unreal Engine exports → Blender (4.2) → HELIOS++ LiDAR simulation → ML-ready point clouds**, including optional **leaf/wood semantics**, UAV flight planning, survey execution, and post-processing for machine learning.*
+*A reproducible pipeline to go from **Unreal Engine exports → Blender (4.2) → HELIOS++ LiDAR simulation → ML-ready point clouds**, including optional **leaf/wood semantics**, UAV flight planning, survey execution, and post-processing for machine learning.*
 
 - **Python package**: `camp3d`
 - **CLI entry point**: `camp3d`
