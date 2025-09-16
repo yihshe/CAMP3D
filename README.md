@@ -7,11 +7,9 @@
 
 **Pipeline and Dataset From Paper: [*Scaling Up Forest Vision with Synthetic Data*](https://arxiv.org/abs/2509.11201) (Yihang She, Andrew Blake, David Coomes, Srinivasan Keshav, 2025)**
 
-A reproducible pipeline to go from **Unreal Engine exports → Blender (4.2) → HELIOS++ LiDAR simulation → ML-ready point clouds**, including optional **leaf/wood semantics**, UAV flight planning, survey execution, and post-processing for machine learning.
-
 ![Synthetic data generation pipeline](figures/pipeline_overview.png)
 
-*Figure 1: **Synthetic data generation pipeline, written in Python, and fully automated to execute each step in this figure.** The pipeline processes a forest scene from Unreal Engine by (a) adding files to Blender, (b) customizing instance and semantic labels, (c) planning the UAV flight path, setting up a virtual laser scanner, and (d) structuring files for LiDAR survey. It completes post-processing to produce a machine learning dataset. This process can be executed with a single command line, allowing parameter adjustments through arguments.*
+*A reproducible pipeline to go from **Unreal Engine exports → Blender (4.2) → HELIOS++ LiDAR simulation → ML-ready point clouds**, including optional **leaf/wood semantics**, UAV flight planning, survey execution, and post-processing for machine learning.*
 
 - **Python package**: `camp3d`
 - **CLI entry point**: `camp3d`
