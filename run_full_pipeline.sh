@@ -16,7 +16,7 @@ CONFIG_FILE="examples/quickdemo_config.yaml"
 
 # Step 1: Install package and dependencies
 echo "Step 1: Installing package and dependencies..."
-pip install -e .
+pip install -e ./camp3d-0.1.0
 camp3d tools write-addon ~/.config/blender/4.2/scripts/addons/
 camp3d tools install-materials --materials-dir $MATERIALS_DIR
 camp3d tools install-examples --scene-dir ./scene

@@ -11,7 +11,7 @@ from pathlib import Path
 
 # Add the package to the path
 import sys
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'camp3d-0.1.0', 'src'))
 
 from camp3d.config import Config, load
 from camp3d.blender_exec import blender_script_path
@@ -154,7 +154,7 @@ def run_tests():
     suite = unittest.TestSuite()
     
     # Add test cases
-    suite.addTests(loader.loadTestsFromTestCase(TestUnreal2Helios))
+    suite.addTests(loader.loadTestsFromTestCase(TestCAMP3D))
     suite.addTests(loader.loadTestsFromTestCase(TestBlenderScripts))
     
     # Run tests
